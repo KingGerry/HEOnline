@@ -1,5 +1,5 @@
 # 黄易群侠传Online源代码
-<h1>Hi 👋, I'm gerry! 今天分享黄易OL-Java Netty版的源代码</h1>
+<h1>Hi 👋, I'm gerry! 今天开源黄易OL-Java Netty版的源代码</h1>
 <p>本源码只做了基本的框架处理，欢迎围观及改进！</p>
 <h2>🚀 用到了下面一些技术</h2>
 <p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="42" height="42" /></a>
