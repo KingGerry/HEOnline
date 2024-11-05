@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hy.business.dao.UserMapper">
+    <resultMap id="User" type="com.hy.business.backentity.BackUser" autoMapping="true">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <!--查询Roles-->
+        <collection property="roles"
+                    autoMapping="true"
+                    javaType="java.util.List"
+                    ofType="com.hy.business.backentity.Role"
+                    column="id"
+                    select="GetRoleByUserId">
+        </collection>
+    </resultMap>
+
+    <select id="Login" parameterType="map" resultMap="User">
+        SELECT
+        *
+        -- zhuangbei.*
+        FROM HY_USER
+        -- LEFT JOIN HY_ROLE_BAG zhuangbei on zhuangbei.roleid = roles.roleid and zhuangbei.Btype = 0
+        WHERE UserName = #{userName}
+    </select>
+    <select id="GetRoleByUserId" parameterType="map" resultType="com.hy.business.backentity.Role">
+        SELECT
+            *
+        FROM HY_ROLE
+
+        WHERE UserId = #{userId}
+    </select>
+    <select id="GetBages" parameterType="map" resultType="com.hy.business.entity.RoleBag">
+        SELECT
+            *
+        FROM HY_ROLE_BAG
+        WHERE RoleId = #{roleId} AND Btype = #{btype}
+    </select>
+    <select id="GetTasks" parameterType="map" resultType="com.hy.business.entity.RoleTasks">
+        SELECT
+        *
+        FROM HY_ROLE_TASKS
+        WHERE RoleId = #{roleId}
+    </select>
+</mapper>

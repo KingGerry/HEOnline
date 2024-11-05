@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.business.dao.RoleBagMapper">
+  <resultMap id="BaseResultMap" type="com.hy.business.entity.RoleBag">
+    <!--@mbg.generated-->
+    <!--@Table hy_role_bag-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="RoleId" jdbcType="INTEGER" property="roleid" />
+    <result column="No" jdbcType="INTEGER" property="no" />
+    <result column="ObjId" jdbcType="INTEGER" property="objid" />
+    <result column="Count" jdbcType="INTEGER" property="count" />
+    <result column="ObjValue" jdbcType="INTEGER" property="objvalue" />
+    <result column="Add1" jdbcType="INTEGER" property="add1" />
+    <result column="Add2" jdbcType="INTEGER" property="add2" />
+    <result column="Add3" jdbcType="INTEGER" property="add3" />
+    <result column="Stone1" jdbcType="INTEGER" property="stone1" />
+    <result column="Stone2" jdbcType="INTEGER" property="stone2" />
+    <result column="Stone3" jdbcType="INTEGER" property="stone3" />
+    <result column="Random1" jdbcType="INTEGER" property="random1" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, RoleId, `No`, ObjId, `Count`, ObjValue, Add1, Add2, Add3, Stone1, Stone2, Stone3, 
+    Random1
+  </sql>
+</mapper>
