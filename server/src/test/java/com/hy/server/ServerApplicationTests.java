@@ -27,11 +27,7 @@ class ServerApplicationTests {
 //            }
 //        }
 //
-//        User n = new User();
-//        n.setUserName("hy98751");
-//        BackUser aa = userService.Login(n);
-//        Contexts.maps.get("1601").getMapObjs();
-//        String bb = "";
+
 
 
     }
